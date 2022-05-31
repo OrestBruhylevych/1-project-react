@@ -1,16 +1,24 @@
-export const App = () => {
+
+import AppInfo from './app-info/app-info';
+import SearchPanel from './search-panel/search-panel';
+import AppFilter from './app-filter/app-filter';
+import EmployeesList from './employees-list/employees-list';
+import EmployeesAddForm from './employees-add-form/employees-add-form';
+
+import './App.css';
+
+ const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+      <div className="app">
+        <AppInfo />
+        <div className='search-panel'>
+          <SearchPanel />
+          <AppFilter />
+        </div>
+        <EmployeesList/>
+        <EmployeesAddForm/>
+      </div>
+    );
 };
+
+export default App;
